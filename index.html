@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franciane Boeira | Executiva de Negócios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#050505',
+                        surface: '#0a0a0a',
+                        accent: '#cfa660', // Elegant gold
+                        accentHover: '#e6c280'
+                    },
+                    fontFamily: {
+                        display: ['Syne', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif']
+                    },
+                    backgroundImage: {
+                        'hero-gradient': 'linear-gradient(to bottom, rgba(5,5,5,0.2), rgba(5,5,5,1))',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        body { background-color: #050505; color: #ffffff; overflow-x: hidden; }
+        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .text-gradient { background: linear-gradient(135deg, #ffffff 0%, #888888 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .marquee-container { overflow: hidden; white-space: nowrap; width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); padding: 1.5rem 0; background: #0a0a0a; }
+        .marquee-content { display: inline-block; animation: marquee 25s linear infinite; }
+        .marquee-content span { margin-right: 3rem; font-family: 'Syne', sans-serif; font-weight: 700; letter-spacing: 0.05em; color: #cfa660; text-transform: uppercase; font-size: 0.875rem; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .bento-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .bento-hover:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.04); border-color: rgba(207, 166, 96, 0.3); }
+        .cta-pulse { animation: pulse-glow 2s infinite; }
+        @keyframes pulse-glow { 0% { box-shadow: 0 0 0 0 rgba(207, 166, 96, 0.4); } 70% { box-shadow: 0 0 0 15px rgba(207, 166, 96, 0); } 100% { box-shadow: 0 0 0 0 rgba(207, 166, 96, 0); } }
+        .whatsapp-pulse { animation: pulse-whatsapp 2s infinite; }
+        @keyframes pulse-whatsapp { 
+            0% { box-shadow: 0 0 20px rgba(37,211,102,0.5), 0 0 0 0 rgba(37, 211, 102, 0.6); } 
+            70% { box-shadow: 0 0 20px rgba(37,211,102,0.5), 0 0 0 20px rgba(37, 211, 102, 0); } 
+            100% { box-shadow: 0 0 20px rgba(37,211,102,0.5), 0 0 0 0 rgba(37, 211, 102, 0); } 
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 w-full z-50 glass border-b-0">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="font-display font-bold text-xl tracking-tighter text-white uppercase">
+                FRANCIANE BOEIRA<span class="text-accent">.</span>
+            </div>
+            <nav class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+                <a href="#diferenciais" class="hover:text-white transition-colors">Diferenciais</a>
+                <a href="#servicos" class="hover:text-white transition-colors">Serviços</a>
+                <a href="#depoimentos" class="hover:text-white transition-colors">Depoimentos</a>
+            </nav>
+            <a href="https://wa.me/5541999527791" target="_blank" rel="noopener noreferrer" class="bg-white text-dark px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-gray-200 transition-colors">
+                Simular Agora
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?q=80&w=2070&auto=format&fit=crop" alt="Background" class="w-full h-full object-cover opacity-30" />
+            <div class="absolute inset-0 bg-hero-gradient"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+            <div class="max-w-3xl hero-content">
+                <div class="inline-block border border-accent/30 bg-accent/10 text-accent px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-6 hero-item">
+                    Crédito Consignado CLT
+                </div>
+                <h1 class="font-display text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight mb-6 hero-item text-gradient">
+                    O crédito que respeita o seu trabalho.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 mb-10 font-light leading-relaxed max-w-2xl hero-item">
+                    Liberação imediata para trabalhadores com apenas 3 meses de carteira assinada. Zero burocracia, parcelas fixas e dinheiro direto na sua conta.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 hero-item">
+                    <a href="https://wa.me/5541999527791" target="_blank" rel="noopener noreferrer" class="bg-accent text-dark px-8 py-4 rounded-full text-base font-semibold hover:bg-accentHover transition-colors text-center cta-pulse">
+                        Simular Meu Crédito
+                    </a>
+                    <a href="#diferenciais" class="glass text-white px-8 py-4 rounded-full text-base font-medium hover:bg-white/5 transition-colors text-center">
+                        Entender as Vantagens
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAIXA DE AUTORIDADE -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span>Aprovação em 15 Minutos</span>
+            <span>•</span>
+            <span>Zero Burocracia</span>
+            <span>•</span>
+            <span>Parcelas Fixas</span>
+            <span>•</span>
+            <span>Dinheiro na Conta</span>
+            <span>•</span>
+            <span>Exclusivo para CLT</span>
+            <span>•</span>
+            <span>Aprovação em 15 Minutos</span>
+            <span>•</span>
+            <span>Zero Burocracia</span>
+            <span>•</span>
+            <span>Parcelas Fixas</span>
+            <span>•</span>
+            <span>Dinheiro na Conta</span>
+            <span>•</span>
+            <span>Exclusivo para CLT</span>
+            <span>•</span>
+        </div>
+    </div>
+
+    <!-- DIFERENCIAIS (BENTO GRID) -->
+    <section id="diferenciais" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 md:mb-24 gs-reveal">
+                <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight mb-4">Projetado para a<br><span class="text-accent">sua realidade.</span></h2>
+                <p class="text-gray-400 max-w-xl">Esqueça as barreiras dos bancos tradicionais. Criamos um modelo focado na sua urgência e segurança.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[320px]">
+                <!-- Card 1 -->
+                <div class="glass rounded-3xl p-8 md:col-span-2 flex flex-col justify-between bento-hover gs-reveal relative overflow-hidden group">
+                    <div class="absolute right-0 bottom-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500 w-64 h-64 translate-x-1/4 translate-y-1/4">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#cfa660" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="font-display text-2xl font-bold mb-3">Acessibilidade Imediata</h3>
+                        <p class="text-gray-400 max-w-md">Diferente das instituições tradicionais, liberamos crédito para quem tem apenas 3 meses de registro na carteira. Seu trabalho já é sua garantia.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass rounded-3xl p-8 flex flex-col justify-between bento-hover gs-reveal">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-3">Zero Burocracia</h3>
+                        <p class="text-gray-400 text-sm">Processo focado na simplicidade. Aprovação facilitada sem complicações contratuais exaustivas.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass rounded-3xl p-8 flex flex-col justify-between bento-hover gs-reveal">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-3">Velocidade na Entrega</h3>
+                        <p class="text-gray-400 text-sm">Dinheiro direto na conta e atendimento ágil via WhatsApp. Essencial para quem tem urgência.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="glass rounded-3xl p-8 md:col-span-2 flex flex-col justify-between bento-hover gs-reveal relative overflow-hidden group">
+                    <div class="absolute right-0 top-0 w-1/2 h-full opacity-40 group-hover:opacity-60 transition-opacity duration-500">
+                        <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?q=80&w=800&auto=format&fit=crop" alt="Previsibilidade" class="w-full h-full object-cover mask-image-gradient" style="-webkit-mask-image: linear-gradient(to right, transparent, black);" />
+                    </div>
+                    <div class="relative z-10 w-full md:w-1/2">
+                        <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h3 class="font-display text-2xl font-bold mb-3">Previsibilidade Financeira</h3>
+                        <p class="text-gray-400">Parcelas fixas descontadas em folha. Tenha a segurança de que o valor não sofrerá alterações, facilitando o controle do seu orçamento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE / SERVIÇOS -->
+    <section id="servicos" class="py-24 bg-surface border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2 gs-reveal">
+                    <div class="relative rounded-3xl overflow-hidden aspect-[4/5]">
+                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1000&auto=format&fit=crop" alt="Consultoria" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-80"></div>
+                        <div class="absolute bottom-8 left-8 right-8">
+                            <div class="glass p-6 rounded-2xl">
+                                <p class="font-display text-xl font-bold text-white mb-1">Consultoria Ágil</p>
+                                <p class="text-sm text-gray-300">Intermediação rápida para quem possui carteira assinada.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 gs-reveal">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight mb-6">Soluções financeiras que <span class="text-accent">impulsionam</span> você.</h2>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                        Como Executiva de Negócios, atuo democratizando o acesso ao crédito para trabalhadores do setor privado. Entendo o valor do seu trabalho e transformo isso em poder de compra imediato.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="mt-1 w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
+                                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Empréstimo Consignado CLT</h4>
+                                <p class="text-gray-400 text-sm">Crédito com desconto direto em folha de pagamento e parcelas fixas, sem surpresas no fim do mês.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="mt-1 w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
+                                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Antecipação de Valores</h4>
+                                <p class="text-gray-400 text-sm">Liberação de capital baseada no seu vínculo empregatício. Saques de valores que você já possui por direito.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANTECIPAÇÃO FGTS -->
+    <section class="py-24 relative overflow-hidden bg-surface">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row-reverse items-center gap-16">
+                <div class="w-full md:w-1/2 gs-reveal">
+                    <div class="inline-block bg-accent/10 border border-accent/30 text-accent px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6">
+                        Antecipação de FGTS
+                    </div>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight mb-6">Você sabia? <br><span class="text-accent">Seu FGTS liberado hoje.</span></h2>
+                    <p class="text-xl text-gray-300 mb-8 font-medium leading-relaxed">
+                        Você pode antecipar o seu FGTS mesmo aos finais de semana e feriados!
+                    </p>
+                    
+                    <div class="space-y-6 mb-8">
+                        <!-- Benefício 1 -->
+                        <div class="glass p-4 rounded-2xl flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">100% Online e Gratuito</h4>
+                                <p class="text-gray-400 text-sm">Atendimento digital, sem filas e sem taxas antecipadas.</p>
+                            </div>
+                        </div>
+                        <!-- Benefício 2 -->
+                        <div class="glass p-4 rounded-2xl flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Sem Consulta ao SPC/Serasa</h4>
+                                <p class="text-gray-400 text-sm">Aprovação garantida mesmo para negativados.</p>
+                            </div>
+                        </div>
+                        <!-- Benefício 3 -->
+                        <div class="glass p-4 rounded-2xl flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Dinheiro em 30 Minutos</h4>
+                                <p class="text-gray-400 text-sm">Agilidade máxima com transferência via Pix direto na sua conta.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/5541999527791" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-dark px-8 py-4 rounded-full text-base font-bold hover:bg-gray-200 transition-colors">
+                        <svg class="w-5 h-5 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                        Antecipar Meu FGTS
+                    </a>
+                </div>
+                <div class="w-full md:w-1/2 gs-reveal">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-accent/20 blur-2xl rounded-full opacity-50"></div>
+                        <img src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5?q=80&w=800&auto=format&fit=crop" alt="Pessoa com celular feliz" class="relative rounded-3xl shadow-2xl w-full object-cover aspect-[4/3]">
+                        <!-- Floating badge -->
+                        <div class="absolute -bottom-6 -left-6 glass p-4 rounded-2xl flex items-center gap-3 animate-bounce" style="animation-duration: 3s;">
+                            <div class="w-10 h-10 rounded-full bg-[#25D366]/20 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-[#25D366]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400">Pix Recebido</p>
+                                <p class="font-bold text-white">R$ 2.500,00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOLSA FAMÍLIA -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-accent/10 to-dark"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="glass rounded-3xl p-8 md:p-16 border border-accent/20 gs-reveal">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="w-full md:w-1/2">
+                        <div class="inline-block bg-accent text-dark px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6">
+                            Novidade
+                        </div>
+                        <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight mb-6">Empréstimo <span class="text-accent">Bolsa Família</span></h2>
+                        <p class="text-xl text-gray-300 mb-4 font-medium">Você é beneficiário do Bolsa Família ou conhece algum amigo ou familiar que seja?</p>
+                        <p class="text-lg text-accent mb-8 flex items-center gap-2">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            Pode ter linha de crédito liberada de até <strong>R$ 750,00</strong>
+                        </p>
+                        
+                        <div class="bg-dark/50 rounded-2xl p-6 mb-8 border border-white/5">
+                            <h4 class="font-bold text-lg mb-4 flex items-center gap-2">
+                                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                Requisitos:
+                            </h4>
+                            <ul class="space-y-3 text-gray-300">
+                                <li class="flex items-center gap-3">
+                                    <svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    Receber acima de R$ 400,00
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    Receber pelo Caixa Tem
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    Não ter empréstimo com a Crefisa
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a href="https://wa.me/5541999527791" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-accent text-dark px-8 py-4 rounded-full text-base font-bold hover:bg-accentHover transition-colors cta-pulse">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                            Solicite sua simulação
+                        </a>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?q=80&w=800&auto=format&fit=crop" alt="Família Feliz" class="rounded-2xl shadow-2xl w-full object-cover aspect-square">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section id="depoimentos" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 md:mb-24 gs-reveal">
+                <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight mb-4">Quem confia na <span class="text-accent">Franciane</span></h2>
+                <p class="text-gray-400 max-w-xl mx-auto">Histórias reais de trabalhadores que transformaram seus planos em realidade com meu atendimento.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Depoimento 1 -->
+                <div class="glass rounded-3xl p-8 gs-reveal">
+                    <div class="flex text-accent mb-6">
+                        ★★★★★
+                    </div>
+                    <p class="text-gray-300 mb-8 italic">"Consegui reformar minha casa sem dor de cabeça. O processo foi todo pelo WhatsApp e o dinheiro caiu no mesmo dia. O desconto em folha me ajuda a não esquecer de pagar."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?q=80&w=200&auto=format&fit=crop" alt="Cliente" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm">Carlos Silva</h4>
+                            <p class="text-xs text-gray-500">Operador de Máquinas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="glass rounded-3xl p-8 gs-reveal">
+                    <div class="flex text-accent mb-6">
+                        ★★★★★
+                    </div>
+                    <p class="text-gray-300 mb-8 italic">"Tinha apenas 4 meses de registro e os bancos tradicionais me negaram. A Franciane aprovou meu crédito em 15 minutos. Resolvi minha emergência médica com tranquilidade."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1bfa8ea?q=80&w=200&auto=format&fit=crop" alt="Cliente" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm">Amanda Costa</h4>
+                            <p class="text-xs text-gray-500">Assistente Administrativa</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="glass rounded-3xl p-8 gs-reveal">
+                    <div class="flex text-accent mb-6">
+                        ★★★★★
+                    </div>
+                    <p class="text-gray-300 mb-8 italic">"A previsibilidade das parcelas fixas é o melhor. Sei exatamente quanto vai descontar e consigo me planejar. Zero taxas ocultas, tudo muito transparente."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Cliente" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm">Roberto Alves</h4>
+                            <p class="text-xs text-gray-500">Motorista Logístico</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-accent/5"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10 gs-reveal">
+            <h2 class="font-display text-4xl md:text-6xl font-bold tracking-tight mb-6">Pronto para ter o dinheiro na conta?</h2>
+            <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">Fale com nossos consultores agora mesmo pelo WhatsApp e descubra o valor liberado para você em menos de 15 minutos.</p>
+            <a href="https://wa.me/5541999527791" target="_blank" rel="noopener noreferrer" class="inline-block bg-accent text-dark px-10 py-5 rounded-full text-lg font-bold hover:bg-accentHover transition-colors cta-pulse">
+                Simular via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <div class="fixed bottom-6 right-6 z-50 flex items-center justify-center">
+        <a href="https://wa.me/5541999527791" target="_blank" rel="noopener noreferrer" class="relative flex items-center justify-center w-16 h-16 bg-[#25D366] text-white rounded-full hover:bg-[#1ebe57] hover:scale-110 transition-all duration-300 group whatsapp-pulse" aria-label="Falar no WhatsApp">
+            <svg class="w-8 h-8 relative z-10" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/5 py-12 bg-darker">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="font-display font-bold text-xl tracking-tighter text-white uppercase">
+                FRANCIANE BOEIRA<span class="text-accent">.</span>
+            </div>
+            <div class="text-sm text-gray-500">
+                &copy; 2026 Franciane Boeira - Executiva de Negócios. Todos os direitos reservados.
+            </div>
+            <div class="flex gap-4 text-sm text-gray-500">
+                <a href="#" class="hover:text-white transition-colors">Termos</a>
+                <a href="#" class="hover:text-white transition-colors">Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS GSAP -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Animation
+        const heroTl = gsap.timeline();
+        heroTl.fromTo(".hero-item", 
+            { y: 50, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power3.out", delay: 0.2 }
+        );
+
+        // Scroll Reveal Animation
+        gsap.utils.toArray('.gs-reveal').forEach(function(elem) {
+            gsap.fromTo(elem, 
+                { y: 50, opacity: 0 },
+                {
+                    y: 0, 
+                    opacity: 1, 
+                    duration: 1, 
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: elem,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+        });
+    </script>
+</body>
+</html>
